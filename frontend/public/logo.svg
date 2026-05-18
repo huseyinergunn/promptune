@@ -1,0 +1,21 @@
+<svg width="680" height="260" viewBox="0 0 680 260" role="img" xmlns="http://www.w3.org/2000/svg">
+<title>Promptune makas logo</title>
+<!-- SOL MAKAS -->
+<line x1="122" y1="88" x2="168" y2="118" fill="none" stroke="#f97316" stroke-width="14" stroke-linecap="round" opacity="0.7"/>
+<line x1="122" y1="172" x2="168" y2="142" fill="none" stroke="#f97316" stroke-width="14" stroke-linecap="round" opacity="0.7"/>
+<polyline points="168,130 240,62 168,130 240,198" fill="none" stroke="#f97316" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="108" cy="80" r="18" fill="none" stroke="#f97316" stroke-width="6" opacity="0.8"/>
+<circle cx="108" cy="80" r="8" fill="#f97316" opacity="0.9"/>
+<circle cx="108" cy="180" r="18" fill="none" stroke="#f97316" stroke-width="6" opacity="0.8"/>
+<circle cx="108" cy="180" r="8" fill="#f97316" opacity="0.9"/>
+<!-- SAĞ MAKAS -->
+<line x1="558" y1="88" x2="512" y2="118" fill="none" stroke="#f97316" stroke-width="14" stroke-linecap="round" opacity="0.7"/>
+<line x1="558" y1="172" x2="512" y2="142" fill="none" stroke="#f97316" stroke-width="14" stroke-linecap="round" opacity="0.7"/>
+<polyline points="512,130 440,62 512,130 440,198" fill="none" stroke="#f97316" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="572" cy="80" r="18" fill="none" stroke="#f97316" stroke-width="6" opacity="0.8"/>
+<circle cx="572" cy="80" r="8" fill="#f97316" opacity="0.9"/>
+<circle cx="572" cy="180" r="18" fill="none" stroke="#f97316" stroke-width="6" opacity="0.8"/>
+<circle cx="572" cy="180" r="8" fill="#f97316" opacity="0.9"/>
+<!-- SLASH -->
+<line x1="318" y1="202" x2="362" y2="58" fill="none" stroke="#f97316" stroke-width="13" stroke-linecap="round" opacity="0.95"/>
+</svg>
