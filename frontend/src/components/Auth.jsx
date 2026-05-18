@@ -47,11 +47,7 @@ export default function Auth({ onAuth, onGuestLogin, darkMode, setDarkMode, show
     <div className={`min-h-screen bg-[#FFFBF5] dark:bg-[#0a0a0a] flex${darkMode ? ' dark' : ''}`}>
       <div className="hidden md:flex md:w-1/2 bg-[#FFF7ED] dark:bg-zinc-900 flex-col items-center justify-center pt-0 pb-16 px-12 border-r border-orange-100 dark:border-zinc-800">
         <div className="flex flex-col items-center mb-8">
-          <img src="/logo.svg" alt="Promptune" className="w-36 h-auto" />
-          <h2 className="text-2xl font-bold text-stone-900 dark:text-white mt-1">
-            prompt<span className="text-orange-500">une</span>
-          </h2>
-          <p className="text-stone-400 dark:text-zinc-500 text-sm mt-0.5">Less tokens. More intelligence.</p>
+          <img src="/logo-full.svg" alt="Promptune" className="w-60 h-auto" />
         </div>
         <img src="/illustration.svg" alt="illustration" className="w-full max-w-xs mb-8" />
         <div className="flex flex-col gap-3 w-full max-w-xs">
@@ -87,7 +83,6 @@ export default function Auth({ onAuth, onGuestLogin, darkMode, setDarkMode, show
               <p className="text-lg font-bold text-stone-900 dark:text-white leading-tight">
                 prompt<span className="text-orange-500">une</span>
               </p>
-              <p className="text-xs text-stone-400 dark:text-zinc-500">Less tokens. More intelligence.</p>
             </div>
           </div>
 

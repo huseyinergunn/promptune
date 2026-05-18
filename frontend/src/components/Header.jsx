@@ -7,7 +7,7 @@ export default function Header({ darkMode, toggleDarkMode, activeTab, mobileMenu
 
   return (
     <>
-      <header className="relative z-10 bg-white/40 dark:bg-zinc-900/90 backdrop-blur-md border-b border-stone-100 dark:border-zinc-700 px-4 py-3 flex items-center justify-between shadow-sm dark:shadow-none">
+      <header className="relative z-10 bg-white/40 dark:bg-zinc-900/90 backdrop-blur-md border-b border-stone-100 dark:border-zinc-700 px-4 py-2 flex items-center justify-between shadow-sm dark:shadow-none">
         <div className="flex items-center gap-3">
           <button
             onClick={onMenuToggle}
@@ -21,11 +21,9 @@ export default function Header({ darkMode, toggleDarkMode, activeTab, mobileMenu
             onClick={() => handleTabChange('dashboard')}
             className="flex items-center gap-2 cursor-pointer"
           >
-            <img src="/logo.svg" alt="Promptune" className="w-16 h-auto block" />
-            <span className="hidden md:block w-px h-5 bg-stone-300 dark:bg-zinc-600 mx-1 shrink-0" />
-            <span className="text-base font-bold text-stone-900 dark:text-white tracking-tight hidden md:block leading-none -translate-y-1">
-              prompt<span className="text-orange-500">une</span>
-            </span>
+            <img src="/logo.svg" alt="Promptune" className="w-7 ml-1 h-auto block" />
+            <span className=" ml-2.5 w-px h-5 bg-stone-200 dark:bg-zinc-700 shrink-0" />
+            <img src="/logo-text.svg" alt="promptune" className="h-7 mt-3 ml-0 w-auto block" />
           </button>
         </div>
 
