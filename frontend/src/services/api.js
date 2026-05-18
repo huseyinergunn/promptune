@@ -1,4 +1,4 @@
-const BASE_URL = 'http://localhost:5000/api';
+const BASE_URL = 'https://promptune-api.onrender.com/api';
 
 const authHeaders = () => {
   const token = sessionStorage.getItem('token');
