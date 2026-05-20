@@ -98,7 +98,7 @@ export default function Auth({ onAuth, onGuestLogin, darkMode, setDarkMode, show
             <button
               onClick={() => handleAuthTabChange('login')}
               className={`cursor-pointer flex-1 px-4 py-2 text-sm font-medium transition-all duration-150 hover:scale-[1.02] active:scale-[0.98] rounded-lg ${
-                mode === 'login' ? 'bg-white dark:bg-zinc-700 text-orange-700 shadow-sm' : 'text-stone-400 dark:text-zinc-500'
+                mode === 'login' ? 'bg-white dark:bg-zinc-700 text-orange-700 shadow-sm' : 'text-stone-600 dark:text-zinc-400'
               }`}
             >
               Giriş Yap
@@ -106,7 +106,7 @@ export default function Auth({ onAuth, onGuestLogin, darkMode, setDarkMode, show
             <button
               onClick={() => handleAuthTabChange('register')}
               className={`cursor-pointer flex-1 px-4 py-2 text-sm font-medium transition-all duration-150 hover:scale-[1.02] active:scale-[0.98] rounded-lg ${
-                mode === 'register' ? 'bg-white dark:bg-zinc-700 text-orange-700 shadow-sm' : 'text-stone-400 dark:text-zinc-500'
+                mode === 'register' ? 'bg-white dark:bg-zinc-700 text-orange-700 shadow-sm' : 'text-stone-600 dark:text-zinc-400'
               }`}
             >
               Kayıt Ol
@@ -177,7 +177,7 @@ export default function Auth({ onAuth, onGuestLogin, darkMode, setDarkMode, show
               type="button"
               onClick={handleSubmit}
               disabled={loading}
-              className="cursor-pointer w-full bg-orange-600 hover:bg-orange-700 text-white font-medium py-3 rounded-xl transition-all duration-150 transform hover:scale-[1.02] active:scale-[0.98] disabled:opacity-40 disabled:cursor-not-allowed disabled:hover:scale-100"
+              className="cursor-pointer w-full bg-orange-700 hover:bg-orange-800 text-white font-semibold py-3 rounded-xl transition-all duration-150 transform hover:scale-[1.02] active:scale-[0.98] disabled:opacity-40 disabled:cursor-not-allowed disabled:hover:scale-100"
             >
               {loading ? 'Lütfen bekleyin...' : (mode === 'login' ? 'Giriş Yap' : 'Kayıt Ol')}
             </button>
