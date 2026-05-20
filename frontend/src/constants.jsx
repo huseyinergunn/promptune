@@ -55,7 +55,7 @@ export const TEMPLATES = [
 ];
 
 export const btn = {
-  primary: 'cursor-pointer bg-orange-500 hover:bg-orange-400 text-white font-medium rounded-xl transition-all duration-150 transform hover:scale-[1.02] active:scale-[0.98] disabled:opacity-40 disabled:cursor-not-allowed disabled:hover:scale-100',
+  primary: 'cursor-pointer bg-orange-600 hover:bg-orange-700 text-white font-medium rounded-xl transition-all duration-150 transform hover:scale-[1.02] active:scale-[0.98] disabled:opacity-40 disabled:cursor-not-allowed disabled:hover:scale-100',
   secondary: 'cursor-pointer bg-stone-100 hover:bg-stone-200 text-stone-600 border border-stone-200 rounded-lg transition-all duration-150 transform hover:scale-[1.03] active:scale-[0.97]',
 };
 
