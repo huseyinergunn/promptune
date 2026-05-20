@@ -1,0 +1,53 @@
+name: Promptune Tests
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+
+  frontend-tests:
+    name: Frontend Tests
+    runs-on: ubuntu-latest
+
+    steps:
+
+      - name: Kodu checkout et
+        uses: actions/checkout@v4
+
+      - name: Node.js kur
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Frontend npm install
+        working-directory: ./frontend
+        run: npm ci
+
+      - name: Frontend testleri çalıştır
+        working-directory: ./frontend
+        run: npm run test -- --run
+
+  backend-tests:
+    name: Backend Tests
+    runs-on: ubuntu-latest
+
+    steps:
+
+      - name: Kodu checkout et
+        uses: actions/checkout@v4
+
+      - name: Node.js kur
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Backend npm install
+        working-directory: ./backend
+        run: npm ci
+
+      - name: Backend testleri çalıştır
+        working-directory: ./backend
+        run: npm run test:run

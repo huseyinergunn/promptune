@@ -1,5 +1,9 @@
 # Promptune
 
+[![Tests](https://img.shields.io/badge/tests-48%20passed-brightgreen)]()
+[![Coverage](https://img.shields.io/badge/coverage-21%25-yellow)]()
+[![Vitest](https://img.shields.io/badge/tested%20with-Vitest-brightgreen)](https://vitest.dev)
+
 **Less tokens, more intelligence.**
 
 Yapay zeka kullanıcılarının promptlarını optimize ederek token maliyetlerini düşüren web uygulaması.
