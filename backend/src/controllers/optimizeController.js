@@ -3,7 +3,11 @@ const Groq = require('groq-sdk');
 const Cache = require('../models/Cache');
 const History = require('../models/History');
 
-const groq = new Groq({ apiKey: process.env.GROQ_API_KEY });
+let _groq;
+const getGroq = () => {
+  if (!_groq) _groq = new Groq({ apiKey: process.env.GROQ_API_KEY });
+  return _groq;
+};
 
 const countTokens = (text) => Math.ceil(text.length / 4);
 
@@ -60,7 +64,7 @@ const analyzePrompt = async (req, res) => {
       });
     }
 
-    const validationCompletion = await groq.chat.completions.create({
+    const validationCompletion = await getGroq().chat.completions.create({
       model: 'llama-3.3-70b-versatile',
       messages: [
         {
@@ -82,7 +86,7 @@ const analyzePrompt = async (req, res) => {
 
     const originalTokenCount = countTokens(prompt);
 
-    const completion = await groq.chat.completions.create({
+    const completion = await getGroq().chat.completions.create({
       model: 'llama-3.3-70b-versatile',
       messages: [
         { role: 'user', content: SYSTEM_PROMPT + '\n\n' + prompt },
@@ -97,7 +101,7 @@ const analyzePrompt = async (req, res) => {
     let finalTokenCount = countTokens(optimizedPrompt);
 
     if (targetLang && targetLang !== 'original') {
-      const translateCompletion = await groq.chat.completions.create({
+      const translateCompletion = await getGroq().chat.completions.create({
         model: 'llama-3.3-70b-versatile',
         messages: [{
           role: 'user',
@@ -182,7 +186,7 @@ const compareOptimize = async (req, res) => {
 
     const results = await Promise.all(
       approaches.map(async (approach) => {
-        const completion = await groq.chat.completions.create({
+        const completion = await getGroq().chat.completions.create({
           model: 'llama-3.3-70b-versatile',
           messages: [{
             role: 'user',

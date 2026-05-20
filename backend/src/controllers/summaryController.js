@@ -1,6 +1,10 @@
 const Groq = require('groq-sdk');
 
-const groq = new Groq({ apiKey: process.env.GROQ_API_KEY });
+let _groq;
+const getGroq = () => {
+  if (!_groq) _groq = new Groq({ apiKey: process.env.GROQ_API_KEY });
+  return _groq;
+};
 
 const countTokens = (text) => Math.ceil(text.length / 4);
 
@@ -26,7 +30,7 @@ const summarizeChat = async (req, res) => {
 
     const originalTokenCount = countTokens(summaryPrompt);
 
-    const completion = await groq.chat.completions.create({
+    const completion = await getGroq().chat.completions.create({
       model: 'llama-3.3-70b-versatile',
       messages: [{ role: 'user', content: summaryPrompt }],
       temperature: 0.3,

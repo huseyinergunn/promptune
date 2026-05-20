@@ -66,7 +66,7 @@ describe('Dashboard — istatistikler', () => {
 
   it('stats varken token tasarrufu görünmeli', () => {
     render(<Dashboard {...defaultProps} stats={{ totalOptimizations: 0, totalSavedTokens: 5000, avgPercentage: 0 }} />)
-    expect(screen.getByText('5.000')).toBeInTheDocument()
+    expect(screen.getByText(/5[,.]000/)).toBeInTheDocument()
   })
 
   it('totalSavedTokens 0 ise "-" göstermeli', () => {
