@@ -48,15 +48,15 @@ export default function Dashboard({ user, isGuest, stats, handleTabChange, setUs
       ) : stats && (
         <div className="grid grid-cols-3 gap-3 mb-6">
           <div className="bg-white dark:bg-zinc-900 border border-stone-200 dark:border-zinc-700 rounded-2xl p-5 text-center">
-            <div className="text-3xl font-bold text-orange-500 mb-1">{stats.totalOptimizations}</div>
+            <div className="text-3xl font-bold text-orange-600 mb-1">{stats.totalOptimizations}</div>
             <div className="text-xs text-stone-400 dark:text-zinc-500">optimizasyon yapıldı</div>
           </div>
           <div className="bg-white dark:bg-zinc-900 border border-stone-200 dark:border-zinc-700 rounded-2xl p-5 text-center">
-            <div className="text-3xl font-bold text-orange-500 mb-1">{stats.totalSavedTokens > 0 ? stats.totalSavedTokens.toLocaleString() : '-'}</div>
+            <div className="text-3xl font-bold text-orange-600 mb-1">{stats.totalSavedTokens > 0 ? stats.totalSavedTokens.toLocaleString() : '-'}</div>
             <div className="text-xs text-stone-400 dark:text-zinc-500">token tasarruf edildi</div>
           </div>
           <div className="bg-white dark:bg-zinc-900 border border-stone-200 dark:border-zinc-700 rounded-2xl p-5 text-center">
-            <div className="text-3xl font-bold text-orange-500 mb-1">{stats.avgPercentage > 0 ? `%${stats.avgPercentage}` : '-'}</div>
+            <div className="text-3xl font-bold text-orange-600 mb-1">{stats.avgPercentage > 0 ? `%${stats.avgPercentage}` : '-'}</div>
             <div className="text-xs text-stone-400 dark:text-zinc-500">ortalama tasarruf sağlandı</div>
           </div>
         </div>

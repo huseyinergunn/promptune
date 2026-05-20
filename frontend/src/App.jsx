@@ -1,16 +1,17 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, lazy, Suspense } from 'react';
 import { getMe, getHistory, getStats } from './services/api';
 import Toast from './components/Toast.jsx';
 import Auth from './components/Auth.jsx';
 import Header from './components/Header.jsx';
 import Sidebar from './components/Sidebar.jsx';
-import Dashboard from './components/tabs/Dashboard.jsx';
-import Optimize from './components/tabs/Optimize.jsx';
-import Summarize from './components/tabs/Summarize.jsx';
-import Calculator from './components/tabs/Calculator.jsx';
-import Compare from './components/tabs/Compare.jsx';
-import Vision from './components/tabs/Vision.jsx';
-import History from './components/tabs/History.jsx';
+
+const Dashboard  = lazy(() => import('./components/tabs/Dashboard.jsx'));
+const Optimize   = lazy(() => import('./components/tabs/Optimize.jsx'));
+const Summarize  = lazy(() => import('./components/tabs/Summarize.jsx'));
+const Calculator = lazy(() => import('./components/tabs/Calculator.jsx'));
+const Compare    = lazy(() => import('./components/tabs/Compare.jsx'));
+const Vision     = lazy(() => import('./components/tabs/Vision.jsx'));
+const History    = lazy(() => import('./components/tabs/History.jsx'));
 
 function App() {
   const [user, setUser] = useState(null);
@@ -147,47 +148,49 @@ function App() {
 
         <main className={`flex-1 ${activeTab === 'dashboard' ? 'overflow-hidden' : 'overflow-y-auto'}`}>
           <div className="max-w-2xl mx-auto w-full px-6 py-8">
-            {activeTab === 'dashboard' && (
-              <Dashboard
-                user={user}
-                isGuest={isGuest}
-                stats={stats}
-                handleTabChange={handleTabChange}
-                setUser={setUser}
-                setIsGuest={setIsGuest}
-              />
-            )}
-            {activeTab === 'optimize' && (
-              <Optimize
-                showToast={showToast}
-                setHistory={setHistory}
-                setStats={setStats}
-                prompt={prompt}
-                setPrompt={setPrompt}
-              />
-            )}
-            {activeTab === 'summarize' && (
-              <Summarize showToast={showToast} />
-            )}
-            {activeTab === 'calculator' && (
-              <Calculator />
-            )}
-            {activeTab === 'compare' && (
-              <Compare showToast={showToast} />
-            )}
-            {activeTab === 'vision' && (
-              <Vision showToast={showToast} />
-            )}
-            {activeTab === 'history' && (
-              <History
-                showToast={showToast}
-                history={history}
-                setHistory={setHistory}
-                setStats={setStats}
-                handleTabChange={handleTabChange}
-                setPrompt={setPrompt}
-              />
-            )}
+            <Suspense fallback={<div className="flex items-center justify-center py-20"><span className="text-stone-400 text-sm">Yükleniyor...</span></div>}>
+              {activeTab === 'dashboard' && (
+                <Dashboard
+                  user={user}
+                  isGuest={isGuest}
+                  stats={stats}
+                  handleTabChange={handleTabChange}
+                  setUser={setUser}
+                  setIsGuest={setIsGuest}
+                />
+              )}
+              {activeTab === 'optimize' && (
+                <Optimize
+                  showToast={showToast}
+                  setHistory={setHistory}
+                  setStats={setStats}
+                  prompt={prompt}
+                  setPrompt={setPrompt}
+                />
+              )}
+              {activeTab === 'summarize' && (
+                <Summarize showToast={showToast} />
+              )}
+              {activeTab === 'calculator' && (
+                <Calculator />
+              )}
+              {activeTab === 'compare' && (
+                <Compare showToast={showToast} />
+              )}
+              {activeTab === 'vision' && (
+                <Vision showToast={showToast} />
+              )}
+              {activeTab === 'history' && (
+                <History
+                  showToast={showToast}
+                  history={history}
+                  setHistory={setHistory}
+                  setStats={setStats}
+                  handleTabChange={handleTabChange}
+                  setPrompt={setPrompt}
+                />
+              )}
+            </Suspense>
           </div>
         </main>
       </div>

@@ -51,6 +51,7 @@ export default function Header({ darkMode, toggleDarkMode, activeTab, mobileMenu
         <div className="flex items-center gap-2">
           <button
             onClick={toggleDarkMode}
+            aria-label={darkMode ? 'Açık temaya geç' : 'Koyu temaya geç'}
             className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-stone-200 dark:border-zinc-700 bg-stone-50 dark:bg-zinc-800 text-stone-600 dark:text-zinc-300 hover:bg-stone-100 dark:hover:bg-zinc-700 transition-all cursor-pointer hover:scale-[1.03] active:scale-[0.97]"
           >
             {darkMode

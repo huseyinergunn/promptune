@@ -71,6 +71,7 @@ export default function Auth({ onAuth, onGuestLogin, darkMode, setDarkMode, show
           <div className="flex justify-end mb-6">
             <button
               onClick={() => setDarkMode(!darkMode)}
+              aria-label={darkMode ? 'Açık temaya geç' : 'Koyu temaya geç'}
               className="p-2 rounded-lg transition-all cursor-pointer hover:scale-110 text-stone-400 hover:text-stone-600 hover:bg-stone-100 dark:text-zinc-500 dark:hover:text-zinc-300 dark:hover:bg-zinc-800"
             >
               {darkMode ? <SunDimIcon size={18} weight="regular" /> : <MoonIcon size={18} weight="regular" />}
@@ -81,7 +82,7 @@ export default function Auth({ onAuth, onGuestLogin, darkMode, setDarkMode, show
             <img src="/logo.svg" alt="Promptune" className="w-14 h-14" />
             <div>
               <p className="text-lg font-bold text-stone-900 dark:text-white leading-tight">
-                prompt<span className="text-orange-500">une</span>
+                prompt<span className="text-orange-600">une</span>
               </p>
             </div>
           </div>
@@ -113,7 +114,7 @@ export default function Auth({ onAuth, onGuestLogin, darkMode, setDarkMode, show
           </div>
 
           <form>
-            <label className={`text-xs font-medium mb-1.5 block transition-colors ${focusedInput === 'email' ? 'text-orange-500' : 'text-stone-600 dark:text-zinc-400'}`}>
+            <label className={`text-xs font-medium mb-1.5 block transition-colors ${focusedInput === 'email' ? 'text-orange-600' : 'text-stone-600 dark:text-zinc-400'}`}>
               E-posta
             </label>
             <input
@@ -126,7 +127,7 @@ export default function Auth({ onAuth, onGuestLogin, darkMode, setDarkMode, show
               className="w-full bg-white dark:bg-zinc-900 border border-stone-200 dark:border-zinc-700 rounded-xl px-4 py-3 text-stone-900 dark:text-white text-sm placeholder-stone-400 dark:placeholder-zinc-600 focus:outline-none focus:border-orange-400 focus:ring-2 focus:ring-orange-100 dark:focus:ring-orange-500/10 transition-all mb-4"
             />
 
-            <label className={`text-xs font-medium mb-1.5 block transition-colors ${focusedInput === 'password' ? 'text-orange-500' : 'text-stone-600 dark:text-zinc-400'}`}>
+            <label className={`text-xs font-medium mb-1.5 block transition-colors ${focusedInput === 'password' ? 'text-orange-600' : 'text-stone-600 dark:text-zinc-400'}`}>
               Şifre
             </label>
             <div className="relative mb-4">
@@ -142,15 +143,16 @@ export default function Auth({ onAuth, onGuestLogin, darkMode, setDarkMode, show
               <button
                 type="button"
                 onClick={() => setShowPassword(!showPassword)}
-                className="absolute right-3 top-1/2 -translate-y-1/2 text-stone-400 dark:text-zinc-500 hover:text-stone-600 dark:hover:text-zinc-300 cursor-pointer transition-colors"
+                aria-label={showPassword ? 'Şifreyi gizle' : 'Şifreyi göster'}
+                className="absolute right-3 top-1/2 -translate-y-1/2 text-stone-400 dark:text-zinc-500 hover:text-stone-600 dark:hover:text-zinc-300 cursor-pointer transition-colors flex items-center justify-center w-6 h-6"
               >
-                {showPassword ? <EyeClosedIcon size={16} weight="regular" /> : <EyeIcon size={16} weight="regular" />}
+                {showPassword ? <EyeClosedIcon size={24} weight="regular" /> : <EyeIcon size={24} weight="regular" />}
               </button>
             </div>
 
             {mode === 'register' && (
               <>
-                <label className={`text-xs font-medium mb-1.5 block transition-colors ${focusedInput === 'confirm' ? 'text-orange-500' : 'text-stone-600 dark:text-zinc-400'}`}>
+                <label className={`text-xs font-medium mb-1.5 block transition-colors ${focusedInput === 'confirm' ? 'text-orange-600' : 'text-stone-600 dark:text-zinc-400'}`}>
                   Şifre Tekrar
                 </label>
                 <input
@@ -203,7 +205,7 @@ export default function Auth({ onAuth, onGuestLogin, darkMode, setDarkMode, show
                 <span className="text-stone-400 dark:text-zinc-600 text-xs">Hesabın yok mu?</span>
                 <button
                   onClick={() => handleAuthTabChange('register')}
-                  className="cursor-pointer text-orange-500 hover:text-orange-400 text-xs ml-1 transition-colors"
+                  className="cursor-pointer text-orange-600 hover:text-orange-500 text-xs ml-1 transition-colors"
                 >
                   Kayıt ol
                 </button>
@@ -213,7 +215,7 @@ export default function Auth({ onAuth, onGuestLogin, darkMode, setDarkMode, show
                 <span className="text-stone-400 dark:text-zinc-600 text-xs">Zaten hesabın var mı?</span>
                 <button
                   onClick={() => handleAuthTabChange('login')}
-                  className="cursor-pointer text-orange-500 hover:text-orange-400 text-xs ml-1 transition-colors"
+                  className="cursor-pointer text-orange-600 hover:text-orange-500 text-xs ml-1 transition-colors"
                 >
                   Giriş yap
                 </button>
