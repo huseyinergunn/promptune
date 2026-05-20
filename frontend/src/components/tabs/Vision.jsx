@@ -82,8 +82,8 @@ export default function Vision({ showToast }) {
             isDragging ? 'border-orange-500 bg-orange-50 dark:bg-orange-500/10' : 'border-stone-300 dark:border-zinc-700 bg-white dark:bg-zinc-900 hover:border-orange-400 dark:hover:border-orange-500/50'
           }`}
         >
-          <TrayArrowUpIcon size={40} weight="regular" className={`mb-3 ${isDragging ? 'text-orange-500' : 'text-stone-400'}`} />
-          <span className={`text-sm font-medium ${isDragging ? 'text-orange-600' : 'text-stone-500'}`}>
+          <TrayArrowUpIcon size={40} weight="regular" className={`mb-3 ${isDragging ? 'text-orange-700' : 'text-stone-400'}`} />
+          <span className={`text-sm font-medium ${isDragging ? 'text-orange-700' : 'text-stone-500'}`}>
             {isDragging ? 'Bırakın...' : 'Görsel yükleyin'}
           </span>
           <span className="text-stone-400 text-xs mt-1">PNG, JPG, WEBP — max 5MB</span>
@@ -144,7 +144,7 @@ export default function Vision({ showToast }) {
             <div className="bg-white dark:bg-zinc-900 border border-stone-200 dark:border-zinc-700 rounded-2xl p-5 shadow-sm dark:shadow-none">
               <p className="text-xs text-stone-400 dark:text-zinc-600 font-medium tracking-widest">OPTİMİZE</p>
               <div className="mt-2">
-                <span className="text-3xl font-bold text-orange-500">{visionResult.optimized.tokenCount}</span>
+                <span className="text-3xl font-bold text-orange-700">{visionResult.optimized.tokenCount}</span>
                 <span className="text-stone-400 dark:text-zinc-600 text-sm ml-1">token</span>
               </div>
               <div className="border-t border-stone-100 dark:border-zinc-800 mt-3 pt-3">
@@ -165,7 +165,7 @@ export default function Vision({ showToast }) {
 
           <div className="mt-3 bg-orange-50 dark:bg-orange-500/10 border border-orange-100 dark:border-orange-500/20 rounded-2xl p-4 flex items-center justify-between">
             <span className="text-sm text-stone-600 dark:text-zinc-400">
-              <span className="text-2xl font-bold text-orange-600">%{visionResult.savings.percentage}</span>
+              <span className="text-2xl font-bold text-orange-700">%{visionResult.savings.percentage}</span>
               {' '}tasarruf
             </span>
             <span className="text-sm text-stone-600 dark:text-zinc-400">

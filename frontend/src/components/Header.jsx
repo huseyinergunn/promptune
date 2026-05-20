@@ -90,7 +90,7 @@ export default function Header({ darkMode, toggleDarkMode, activeTab, mobileMenu
                     { step: '5', title: 'Görsel analiz yapılır', desc: 'Görsel Analiz sekmesinde Google Gemini 2.5 Flash Vision API devreye girer. Görseldeki metin okunur, ardından Groq ile optimize edilir.' },
                   ].map(item => (
                     <div key={item.step} className="flex gap-3">
-                      <div className="w-7 h-7 rounded-full bg-orange-100 dark:bg-orange-500/10 text-orange-600 dark:text-orange-400 flex items-center justify-center text-xs font-bold shrink-0">
+                      <div className="w-7 h-7 rounded-full bg-orange-100 dark:bg-orange-500/10 text-orange-700 dark:text-orange-400 flex items-center justify-center text-xs font-bold shrink-0">
                         {item.step}
                       </div>
                       <div>

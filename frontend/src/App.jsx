@@ -56,6 +56,8 @@ function App() {
   }, []);
 
   useEffect(() => {
+    const token = sessionStorage.getItem('token');
+    if (!token) return;
     getStats().then(setStats).catch(() => {});
     getHistory().then(data => setHistory(data.history)).catch(() => {});
   }, []);

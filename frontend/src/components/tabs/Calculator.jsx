@@ -45,7 +45,7 @@ export default function Calculator() {
           <button
             key={s.label}
             onClick={() => { setCalcInputTokens(String(s.input)); setCalcOutputTokens(String(s.output)); }}
-            className="text-xs bg-orange-50 dark:bg-orange-500/10 border border-orange-200 dark:border-orange-500/30 text-orange-600 dark:text-orange-400 px-3 py-1.5 rounded-lg cursor-pointer hover:bg-orange-100 dark:hover:bg-orange-500/20 transition-all hover:scale-[1.02]"
+            className="text-xs bg-orange-50 dark:bg-orange-500/10 border border-orange-200 dark:border-orange-500/30 text-orange-700 dark:text-orange-400 px-3 py-1.5 rounded-lg cursor-pointer hover:bg-orange-100 dark:hover:bg-orange-500/20 transition-all hover:scale-[1.02]"
           >
             {s.label}
           </button>
@@ -118,7 +118,7 @@ export default function Calculator() {
               >
                 <div className="flex items-center gap-3">
                   {i === 0 && (
-                    <span className="text-xs bg-orange-500 text-white px-2 py-1 rounded-full font-medium shrink-0">En Ucuz</span>
+                    <span className="text-xs bg-orange-600 text-white px-2 py-1 rounded-full font-medium shrink-0">En Ucuz</span>
                   )}
                   <div>
                     <div className="flex items-center gap-2">
@@ -129,7 +129,7 @@ export default function Calculator() {
                   </div>
                 </div>
                 <div className="text-right">
-                  <div className={`text-lg font-bold ${i === 0 ? 'text-orange-500' : 'text-stone-900 dark:text-white'}`}>
+                  <div className={`text-lg font-bold ${i === 0 ? 'text-orange-700' : 'text-stone-900 dark:text-white'}`}>
                     {model.totalFormatted}
                   </div>
                   <div className="text-xs text-stone-400 dark:text-zinc-500">per istek</div>

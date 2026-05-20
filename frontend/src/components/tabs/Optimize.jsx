@@ -111,7 +111,7 @@ export default function Optimize({ showToast, setHistory, setStats, prompt, setP
         />
         <div className="flex items-center justify-between border-t border-stone-100 dark:border-zinc-800 px-3 py-2">
           <div className="flex items-center gap-3">
-            <span className={`text-xs ${prompt.length > 3500 ? 'text-red-500' : prompt.length > 3000 ? 'text-orange-500' : 'text-stone-400 dark:text-zinc-600'}`}>
+            <span className={`text-xs ${prompt.length > 3500 ? 'text-red-500' : prompt.length > 3000 ? 'text-orange-700' : 'text-stone-400 dark:text-zinc-600'}`}>
               ~{estimateTokens(prompt)} token · {prompt.length} / 4000
             </span>
             {prompt && (
@@ -140,7 +140,7 @@ export default function Optimize({ showToast, setHistory, setStats, prompt, setP
                       onClick={() => { setTargetLang(lang.value); setLangDropdownOpen(false); }}
                       className={`w-full px-4 py-2.5 text-xs text-left transition-colors cursor-pointer ${
                         targetLang === lang.value
-                          ? 'bg-orange-50 dark:bg-orange-500/10 text-orange-600 dark:text-orange-400'
+                          ? 'bg-orange-50 dark:bg-orange-500/10 text-orange-700 dark:text-orange-400'
                           : 'text-stone-600 dark:text-zinc-400 hover:bg-stone-50 dark:hover:bg-zinc-800'
                       }`}
                     >
@@ -209,8 +209,8 @@ export default function Optimize({ showToast, setHistory, setStats, prompt, setP
             </div>
             <div className="text-stone-300 dark:text-zinc-700 text-xl">→</div>
             <div className="text-center">
-              <div className="text-xs text-orange-500 mb-1 uppercase tracking-widest">Optimize</div>
-              <div className="text-2xl font-bold text-orange-500">{displayOptimized} <span className="text-sm font-normal text-orange-300">token</span></div>
+              <div className="text-xs text-orange-700 mb-1 uppercase tracking-widest">Optimize</div>
+              <div className="text-2xl font-bold text-orange-700">{displayOptimized} <span className="text-sm font-normal text-orange-400">token</span></div>
             </div>
           </div>
 
@@ -232,7 +232,7 @@ export default function Optimize({ showToast, setHistory, setStats, prompt, setP
 
           <div className="mt-3 bg-orange-50 dark:bg-orange-500/10 border border-orange-100 dark:border-orange-500/20 rounded-2xl p-4 flex items-center justify-between">
             <span className="text-sm text-stone-600 dark:text-zinc-400">
-              <span className="text-2xl font-bold text-orange-500">%{result.savings.percentage}</span>
+              <span className="text-2xl font-bold text-orange-700">%{result.savings.percentage}</span>
               {' '}tasarruf
             </span>
             <div className="flex items-center gap-2">
@@ -240,7 +240,7 @@ export default function Optimize({ showToast, setHistory, setStats, prompt, setP
                 <span className="font-semibold text-stone-900 dark:text-white">{result.savings.tokens}</span> token kazanıldı
               </span>
               {result.cached && (
-                <span className="text-xs bg-orange-100 dark:bg-orange-500/10 text-orange-600 dark:text-orange-400 px-2 py-1 rounded-full">
+                <span className="text-xs bg-orange-100 dark:bg-orange-500/10 text-orange-700 dark:text-orange-400 px-2 py-1 rounded-full">
                   ⚡ Önbellekten
                 </span>
               )}

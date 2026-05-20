@@ -125,7 +125,7 @@ export default function History({ showToast, history, setHistory, setStats, hand
           <p className="text-stone-300 dark:text-zinc-700 text-xs mt-1">İlk prompt'unuzu optimize edin</p>
           <button
             onClick={() => handleTabChange('optimize')}
-            className="mt-4 text-orange-500 hover:text-orange-400 text-xs cursor-pointer transition-colors"
+            className="mt-4 text-orange-700 hover:text-orange-600 text-xs cursor-pointer transition-colors"
           >
             Prompt Optimize'a git →
           </button>
@@ -161,7 +161,7 @@ export default function History({ showToast, history, setHistory, setStats, hand
                 <span className="text-stone-900 dark:text-white font-medium text-sm">{item.originalTokenCount}</span>
                 <span className="text-stone-300 dark:text-zinc-700 text-xs">→</span>
                 <span className="text-stone-900 font-medium text-sm">{item.optimizedTokenCount}</span>
-                <span className="text-xs text-orange-600 bg-orange-100 px-2 py-0.5 rounded-full">
+                <span className="text-xs text-orange-700 bg-orange-100 px-2 py-0.5 rounded-full">
                   %{item.percentage} tasarruf
                 </span>
               </div>

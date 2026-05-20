@@ -121,7 +121,7 @@ export default function Compare({ showToast }) {
                       onClick={() => { setTaskType(t.value); setTaskDropdownOpen(false); }}
                       className={`cursor-pointer w-full px-4 py-3 text-sm text-left transition-colors ${
                         taskType === t.value
-                          ? 'bg-orange-50 dark:bg-orange-500/10 text-orange-600 dark:text-orange-400'
+                          ? 'bg-orange-50 dark:bg-orange-500/10 text-orange-700 dark:text-orange-400'
                           : 'text-stone-600 dark:text-zinc-400 hover:bg-stone-50 dark:hover:bg-zinc-800 hover:text-stone-900 dark:hover:text-white'
                       }`}
                     >
@@ -173,11 +173,11 @@ export default function Compare({ showToast }) {
                     <span className="text-stone-400 dark:text-zinc-600 text-xs">{model.provider}</span>
                   </div>
                   {model.recommended && (
-                    <span className="text-xs text-white bg-orange-500 px-2 py-1 rounded-full">✦ Önerilen</span>
+                    <span className="text-xs text-white bg-orange-600 px-2 py-1 rounded-full">✦ Önerilen</span>
                   )}
                 </div>
                 <div className="mb-3">
-                  <span className={`text-2xl font-bold ${model.recommended ? 'text-orange-600' : 'text-stone-900'}`}>
+                  <span className={`text-2xl font-bold ${model.recommended ? 'text-orange-700' : 'text-stone-900'}`}>
                     {model.totalCostFormatted}
                   </span>
                   <span className="text-stone-400 text-xs ml-2">/ {compareResult.tokenCount} token</span>
@@ -258,7 +258,7 @@ export default function Compare({ showToast }) {
                       result.percentage > 40
                         ? 'bg-green-100 dark:bg-green-500/10 text-green-600 dark:text-green-400'
                         : result.percentage > 20
-                        ? 'bg-orange-100 dark:bg-orange-500/10 text-orange-600 dark:text-orange-400'
+                        ? 'bg-orange-100 dark:bg-orange-500/10 text-orange-700 dark:text-orange-400'
                         : 'bg-stone-100 dark:bg-zinc-800 text-stone-500 dark:text-zinc-400'
                     }`}>
                       %{result.percentage > 0 ? result.percentage : 0}
@@ -275,7 +275,7 @@ export default function Compare({ showToast }) {
                       {result.originalTokens} → {result.optimizedTokens} token
                     </span>
                     {selectedApproach === result.id && (
-                      <span className="text-xs text-orange-500 font-medium">✓ Seçildi</span>
+                      <span className="text-xs text-orange-700 font-medium">✓ Seçildi</span>
                     )}
                   </div>
                 </div>

@@ -86,7 +86,7 @@ export default function Summarize({ showToast }) {
 
           <div className="mt-3 bg-orange-50 dark:bg-orange-500/10 border border-orange-100 dark:border-orange-500/20 rounded-2xl p-4 flex items-center justify-between">
             <span className="text-sm text-stone-600 dark:text-zinc-400">
-              <span className="text-2xl font-bold text-orange-600">%{summaryResult.savings.percentage}</span>
+              <span className="text-2xl font-bold text-orange-700">%{summaryResult.savings.percentage}</span>
               {' '}tasarruf
             </span>
             <div className="flex items-center gap-3 text-sm text-stone-600">

@@ -7,7 +7,7 @@ export default function Toast({ toast, onClose }) {
           ? 'bg-white dark:bg-zinc-900 border border-green-200 dark:border-green-500/30 text-green-700 dark:text-green-400'
           : toast.type === 'error'
           ? 'bg-white dark:bg-zinc-900 border border-red-200 dark:border-red-500/30 text-red-600 dark:text-red-400'
-          : 'bg-white dark:bg-zinc-900 border border-orange-200 dark:border-orange-500/30 text-orange-600 dark:text-orange-400'
+          : 'bg-white dark:bg-zinc-900 border border-orange-200 dark:border-orange-500/30 text-orange-700 dark:text-orange-400'
       }`}
     >
       <span className="text-base">

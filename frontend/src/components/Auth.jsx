@@ -66,7 +66,7 @@ export default function Auth({ onAuth, onGuestLogin, darkMode, setDarkMode, show
         </div>
       </div>
 
-      <div className="w-full md:w-1/2 flex items-center justify-center p-8 bg-[#FFFBF5] dark:bg-[#0a0a0a]">
+      <main className="w-full md:w-1/2 flex items-center justify-center p-8 bg-[#FFFBF5] dark:bg-[#0a0a0a]">
         <div className="w-full max-w-sm">
           <div className="flex justify-end mb-6">
             <button
@@ -82,7 +82,7 @@ export default function Auth({ onAuth, onGuestLogin, darkMode, setDarkMode, show
             <img src="/logo.svg" alt="Promptune" className="w-14 h-14" />
             <div>
               <p className="text-lg font-bold text-stone-900 dark:text-white leading-tight">
-                prompt<span className="text-orange-600">une</span>
+                prompt<span className="text-orange-700">une</span>
               </p>
             </div>
           </div>
@@ -98,7 +98,7 @@ export default function Auth({ onAuth, onGuestLogin, darkMode, setDarkMode, show
             <button
               onClick={() => handleAuthTabChange('login')}
               className={`cursor-pointer flex-1 px-4 py-2 text-sm font-medium transition-all duration-150 hover:scale-[1.02] active:scale-[0.98] rounded-lg ${
-                mode === 'login' ? 'bg-white dark:bg-zinc-700 text-orange-600 shadow-sm' : 'text-stone-400 dark:text-zinc-500'
+                mode === 'login' ? 'bg-white dark:bg-zinc-700 text-orange-700 shadow-sm' : 'text-stone-400 dark:text-zinc-500'
               }`}
             >
               Giriş Yap
@@ -106,7 +106,7 @@ export default function Auth({ onAuth, onGuestLogin, darkMode, setDarkMode, show
             <button
               onClick={() => handleAuthTabChange('register')}
               className={`cursor-pointer flex-1 px-4 py-2 text-sm font-medium transition-all duration-150 hover:scale-[1.02] active:scale-[0.98] rounded-lg ${
-                mode === 'register' ? 'bg-white dark:bg-zinc-700 text-orange-600 shadow-sm' : 'text-stone-400 dark:text-zinc-500'
+                mode === 'register' ? 'bg-white dark:bg-zinc-700 text-orange-700 shadow-sm' : 'text-stone-400 dark:text-zinc-500'
               }`}
             >
               Kayıt Ol
@@ -114,7 +114,7 @@ export default function Auth({ onAuth, onGuestLogin, darkMode, setDarkMode, show
           </div>
 
           <form>
-            <label className={`text-xs font-medium mb-1.5 block transition-colors ${focusedInput === 'email' ? 'text-orange-600' : 'text-stone-600 dark:text-zinc-400'}`}>
+            <label className={`text-xs font-medium mb-1.5 block transition-colors ${focusedInput === 'email' ? 'text-orange-700' : 'text-stone-600 dark:text-zinc-400'}`}>
               E-posta
             </label>
             <input
@@ -127,7 +127,7 @@ export default function Auth({ onAuth, onGuestLogin, darkMode, setDarkMode, show
               className="w-full bg-white dark:bg-zinc-900 border border-stone-200 dark:border-zinc-700 rounded-xl px-4 py-3 text-stone-900 dark:text-white text-sm placeholder-stone-400 dark:placeholder-zinc-600 focus:outline-none focus:border-orange-400 focus:ring-2 focus:ring-orange-100 dark:focus:ring-orange-500/10 transition-all mb-4"
             />
 
-            <label className={`text-xs font-medium mb-1.5 block transition-colors ${focusedInput === 'password' ? 'text-orange-600' : 'text-stone-600 dark:text-zinc-400'}`}>
+            <label className={`text-xs font-medium mb-1.5 block transition-colors ${focusedInput === 'password' ? 'text-orange-700' : 'text-stone-600 dark:text-zinc-400'}`}>
               Şifre
             </label>
             <div className="relative mb-4">
@@ -152,7 +152,7 @@ export default function Auth({ onAuth, onGuestLogin, darkMode, setDarkMode, show
 
             {mode === 'register' && (
               <>
-                <label className={`text-xs font-medium mb-1.5 block transition-colors ${focusedInput === 'confirm' ? 'text-orange-600' : 'text-stone-600 dark:text-zinc-400'}`}>
+                <label className={`text-xs font-medium mb-1.5 block transition-colors ${focusedInput === 'confirm' ? 'text-orange-700' : 'text-stone-600 dark:text-zinc-400'}`}>
                   Şifre Tekrar
                 </label>
                 <input
@@ -177,7 +177,7 @@ export default function Auth({ onAuth, onGuestLogin, darkMode, setDarkMode, show
               type="button"
               onClick={handleSubmit}
               disabled={loading}
-              className="cursor-pointer w-full bg-orange-500 hover:bg-orange-400 text-white font-medium py-3 rounded-xl transition-all duration-150 transform hover:scale-[1.02] active:scale-[0.98] disabled:opacity-40 disabled:cursor-not-allowed disabled:hover:scale-100"
+              className="cursor-pointer w-full bg-orange-600 hover:bg-orange-700 text-white font-medium py-3 rounded-xl transition-all duration-150 transform hover:scale-[1.02] active:scale-[0.98] disabled:opacity-40 disabled:cursor-not-allowed disabled:hover:scale-100"
             >
               {loading ? 'Lütfen bekleyin...' : (mode === 'login' ? 'Giriş Yap' : 'Kayıt Ol')}
             </button>
@@ -202,20 +202,20 @@ export default function Auth({ onAuth, onGuestLogin, darkMode, setDarkMode, show
           <div className="mt-5 text-center">
             {mode === 'login' ? (
               <>
-                <span className="text-stone-400 dark:text-zinc-600 text-xs">Hesabın yok mu?</span>
+                <span className="text-stone-600 dark:text-zinc-400 text-xs">Hesabın yok mu?</span>
                 <button
                   onClick={() => handleAuthTabChange('register')}
-                  className="cursor-pointer text-orange-600 hover:text-orange-500 text-xs ml-1 transition-colors"
+                  className="cursor-pointer text-orange-700 hover:text-orange-700 text-xs ml-1 transition-colors"
                 >
                   Kayıt ol
                 </button>
               </>
             ) : (
               <>
-                <span className="text-stone-400 dark:text-zinc-600 text-xs">Zaten hesabın var mı?</span>
+                <span className="text-stone-600 dark:text-zinc-400 text-xs">Zaten hesabın var mı?</span>
                 <button
                   onClick={() => handleAuthTabChange('login')}
-                  className="cursor-pointer text-orange-600 hover:text-orange-500 text-xs ml-1 transition-colors"
+                  className="cursor-pointer text-orange-700 hover:text-orange-700 text-xs ml-1 transition-colors"
                 >
                   Giriş yap
                 </button>
@@ -223,7 +223,7 @@ export default function Auth({ onAuth, onGuestLogin, darkMode, setDarkMode, show
             )}
           </div>
         </div>
-      </div>
+      </main>
     </div>
   );
 }
