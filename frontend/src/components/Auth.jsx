@@ -98,7 +98,7 @@ export default function Auth({ onAuth, onGuestLogin, darkMode, setDarkMode, show
             <button
               onClick={() => handleAuthTabChange('login')}
               className={`cursor-pointer flex-1 px-4 py-2 text-sm font-medium transition-all duration-150 hover:scale-[1.02] active:scale-[0.98] rounded-lg ${
-                mode === 'login' ? 'bg-white dark:bg-zinc-700 text-orange-700 shadow-sm' : 'text-stone-600 dark:text-zinc-400'
+                mode === 'login' ? 'bg-white dark:bg-zinc-700 text-orange-700 dark:text-orange-400 shadow-sm' : 'text-stone-600 dark:text-zinc-300'
               }`}
             >
               Giriş Yap
@@ -106,7 +106,7 @@ export default function Auth({ onAuth, onGuestLogin, darkMode, setDarkMode, show
             <button
               onClick={() => handleAuthTabChange('register')}
               className={`cursor-pointer flex-1 px-4 py-2 text-sm font-medium transition-all duration-150 hover:scale-[1.02] active:scale-[0.98] rounded-lg ${
-                mode === 'register' ? 'bg-white dark:bg-zinc-700 text-orange-700 shadow-sm' : 'text-stone-600 dark:text-zinc-400'
+                mode === 'register' ? 'bg-white dark:bg-zinc-700 text-orange-700 dark:text-orange-400 shadow-sm' : 'text-stone-600 dark:text-zinc-300'
               }`}
             >
               Kayıt Ol
@@ -205,7 +205,7 @@ export default function Auth({ onAuth, onGuestLogin, darkMode, setDarkMode, show
                 <span className="text-stone-600 dark:text-zinc-400 text-xs">Hesabın yok mu?</span>
                 <button
                   onClick={() => handleAuthTabChange('register')}
-                  className="cursor-pointer text-orange-700 hover:text-orange-700 text-xs ml-1 transition-colors"
+                  className="cursor-pointer text-orange-700 dark:text-orange-400 hover:text-orange-700 dark:hover:text-orange-300 text-xs ml-1 transition-colors"
                 >
                   Kayıt ol
                 </button>

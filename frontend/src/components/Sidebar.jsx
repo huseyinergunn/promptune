@@ -14,7 +14,7 @@ export default function Sidebar({ activeTab, handleTabChange, user, isGuest, onL
             <div className="flex items-center gap-2 px-4 mb-6">
               <img src="/logo.svg" alt="Promptune" className="w-11 h-11" />
               <span className="font-bold text-stone-900 dark:text-white">
-                prompt<span className="text-orange-700">une</span>
+                prompt<span className="text-orange-700 dark:text-orange-400">une</span>
               </span>
             </div>
             <div className="flex flex-col gap-1 px-2 flex-1">
